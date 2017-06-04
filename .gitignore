@@ -1,0 +1,10 @@
+# OS X
+*.DS_STORE
+
+# C
+*.out
+*.o
+*.dSYM
+
+# Vim
+*.swp
