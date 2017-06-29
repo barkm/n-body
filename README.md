@@ -8,7 +8,7 @@ Program for simulating N-body systems. The algorithm is a parallel implemenation
 
 ## Installation
 
-Install a MPI library such as [OpenMPI](https://www.open-mpi.org/) or [MPICH](https://www.mpich.org/). 
+Install a MPI library such as [OpenMPI](https://www.open-mpi.org/) or [MPICH](https://www.mpich.org/). On Mac OS X this can be done through [Homebrew](https://brew.sh/):
 
 ```
 $ brew install mpich
@@ -22,7 +22,7 @@ $ cd n-body
 $ make  
 ```
  
-To check if the program runs (on 2 processes)
+To check if the program runs (on 2 processes):
 
 ```
 $ mpirun -np 2 ./main.out
