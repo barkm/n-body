@@ -141,17 +141,20 @@ int main(int argc, char * argv[]){
         }
         
         /* Output */
+        /* Print time step to stdout */
+        if(rank == 0 and ip.verbose()){
+            std::cout << "\rTime step: " << t + 1 << "/" << tmax;
+            if(t == tmax - 1){
+                std::cout << std::endl;
+            }
+        }
+
         if(ip.sampling_interval() == 1 or (t % ip.sampling_interval() == 0 and t != 0)){
 
             /* Stop the time */
             if(ip.clock_run()){
                 MPI_Barrier(MPI_COMM_WORLD);
                 stop_time = MPI_Wtime(); 
-            }
-
-            /* Print time step to stdout */
-            if(rank == 0 and ip.verbose()){
-                std::cout << t << std::endl;
             }
 
             /* Write tree */
