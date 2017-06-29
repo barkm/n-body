@@ -58,6 +58,7 @@ int main(int argc, char * argv[]){
         if(rank == 0){
             std::cerr << "Error: Number of processes must be a power of 2!" << std::endl;
         }
+        MPI_Finalize();
         return -1;
     }
 
