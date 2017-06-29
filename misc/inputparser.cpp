@@ -84,8 +84,8 @@ void print_usage(int argc, char ** argv){
     std::cout << "\t -o outfile \t output file" << std::endl;
     std::cout << "\t -r outfile \t output file for tree" << std::endl;
     std::cout << "\t -R outfile \t output file for tree size" << std::endl;
-    std::cout << "\t -f infile \t input file with initial conditions. (not used by default)" << std::endl;
-    std::cout << "\t -v \t \t verbose program (prints at each sampled time step)" << std::endl;
+    std::cout << "\t -f infile \t input file with initial conditions." << std::endl;
+    std::cout << "\t -v \t \t verbose program" << std::endl;
     std::cout << "\t -q outfile \t output summary to outfile" << std::endl;
 }
 
