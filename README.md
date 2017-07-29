@@ -14,18 +14,21 @@ Install a MPI library such as [OpenMPI](https://www.open-mpi.org/) or [MPICH](ht
 $ brew install mpich
 ```
 
-Download the git repository and compile with `make`
+Download the git repository and build the program in a some directory, e.g. `build`
 
 ```
 $ git clone https://github.com/pbarkm/n-body.git  
 $ cd n-body  
-$ make  
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
 ```
  
 To check if the program runs (on 2 processes):
 
 ```
-$ mpirun -np 2 ./main.out
+$ mpirun -np 2 ./n_body
 ```
 
 The supplied python files for plotting require `matplotlib` and `numpy`.
@@ -35,13 +38,13 @@ The supplied python files for plotting require `matplotlib` and `numpy`.
 To display the command line options run
 
 ```
-$ mpirun -np 1 ./main.out -?
+$ mpirun -np 1 ./n_body -?
 ```
 
 The following command runs a simulation of 1000 bodies for 10000 time steps. The sampled positions of the bodies are stored in positions.txt and the program is run with the verbose flag (-v).
 
 ```
-$ mpirun -np 2 ./main.out -N 1000 -s 10000 -v -o positions.txt
+$ mpirun -np 2 ./n_body -N 1000 -s 10000 -v -o positions.txt
 ```
 
 A python script is supplied to animate the simulation.
