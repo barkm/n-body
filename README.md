@@ -14,12 +14,15 @@ Install a MPI library such as [OpenMPI](https://www.open-mpi.org/) or [MPICH](ht
 $ brew install mpich
 ```
 
-Download the git repository and compile with `make`
+Download the git repository and compile with `cmake`
 
 ```
 $ git clone https://github.com/pbarkm/n-body.git  
 $ cd n-body  
-$ make  
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
 ```
  
 To check if the program runs (on 2 processes):
