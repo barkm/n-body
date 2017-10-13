@@ -6,6 +6,8 @@ Parallel Barnes-Hut Algorithm
 
 Program for simulating N-body systems. The algorithm is a parallel implemenation of the [_Barnes-Hut algorithm_](https://www.nature.com/nature/journal/v324/n6096/abs/324446a0.html) inspired by [_Salmon, John K.  Parallel hierarchical N-body methods. Diss. California Institute of Technology, 1991_](http://thesis.library.caltech.edu/6291/). The program can run on 2<sup>d</sup> process using MPI. 
 
+A [simulation](https://www.youtube.com/watch?v=yFQX-5nmXYc) of two spinning disks and a [visualization](https://www.youtube.com/watch?v=KrtevnjgtgM) of the Barnes-Hut tree. 
+
 ## Installation
 
 Install a MPI library such as [OpenMPI](https://www.open-mpi.org/) or [MPICH](https://www.mpich.org/). On Mac OS X this can be done through [Homebrew](https://brew.sh/):
